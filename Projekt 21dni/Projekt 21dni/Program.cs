@@ -1,16 +1,54 @@
-﻿var name = "Ewa";
-int age = 29;
-var gender = "kobieta";
+﻿using Projekt_21dni;
 
-if (gender == "kobieta" && age < 30)
+var user1 = new Employee("Kamil", "Kaamil", "18");
+var user2 = new Employee("Kuba", "Kuuba", "18");
+var user3 = new Employee("Adam", "Adaam", "18");
+
+
+user1.AddScore(2);
+user1.AddScore(8);
+user1.AddScore(7);
+user1.AddScore(3);
+user1.AddScore(6);
+
+user2.AddScore(4);
+user2.AddScore(8);
+user2.AddScore(7);
+user2.AddScore(9);
+user2.AddScore(5);
+
+user3.AddScore(2);
+user3.AddScore(6);
+user3.AddScore(5);
+user3.AddScore(7);
+user3.AddScore(3);
+
+int MaxResult = -1;
+Employee userWithMaxResult = null;
+
+List<Employee> users = new List<Employee>()
 {
-    Console.WriteLine("Kobieta poniżej lat 30");
-}
-    else if (name == "Ewa" && age == 33)
+    user1,user2, user3
+};
+
+foreach (var user in users)
 {
-    Console.WriteLine("Ewa lat 33");
+    if (user.Result > MaxResult)
+    {
+        userWithMaxResult = user1;
+        MaxResult = user1.Result;
+    }
+    else if (user2.Result > MaxResult)
+    {
+        userWithMaxResult = user2;
+        MaxResult = user2.Result;
+    }
+    else if (user3.Result > MaxResult)
+    {
+        userWithMaxResult = user3;
+        MaxResult = user3.Result;
+    }
 }
-    if (gender == "mężczyzna" && age < 18)
-{
-    Console.WriteLine("niepełnooletni mężczyzna");
-}
+
+Console.WriteLine("Najwyższa ocena wynosi: " + MaxResult + " punkty");
+Console.WriteLine("Najwyższa ocena została zdobyta przez pracownika: " + userWithMaxResult.Name + " " + userWithMaxResult.Surname + ", " + userWithMaxResult.Age + " lata");
