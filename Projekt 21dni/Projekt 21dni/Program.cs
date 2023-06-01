@@ -52,4 +52,3 @@ foreach (var user in users)
 
 Console.WriteLine("Najwyższa ocena wynosi: " + MaxResult + " punkty");
 Console.WriteLine("Najwyższa ocena została zdobyta przez pracownika: " + userWithMaxResult.Name + " " + userWithMaxResult.Surname + ", " + userWithMaxResult.Age + " lata");
-//test
