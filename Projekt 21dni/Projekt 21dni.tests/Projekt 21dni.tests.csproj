@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\..\..\repos\Projekt-21dni\Projekt 21dni\Projekt 21dni\Projekt 21dni.csproj" />
+    <ProjectReference Include="..\Projekt 21dni\Projekt 21dni.csproj" />
   </ItemGroup>
 
 </Project>
