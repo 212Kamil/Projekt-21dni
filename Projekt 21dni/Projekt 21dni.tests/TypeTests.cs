@@ -1,54 +1,23 @@
-﻿namespace Projekt_21dni.tests
+﻿using NUnit.Framework;
+using System.ComponentModel;
+
+namespace Projekt_21dni.tests
 {
     public class TypeTests
     {
-        [Test]
+    [Test]
         public void TEST()
         {
-
-            // arrange
-            var user1 = GetUser("Kamil");
-            var user2 = GetUser("Emilka");
-
-            // act
-
-
-            // assert
-            Assert.AreNotEqual(user1, user2);
-        }
-        [Test]
-        public void INT()
-        {
-
-            // arrange
-            int number1 = (1);
-            int number2 = (1);
-
-            // act
+            var employee = new Employee("Kamil", "A");
+            employee.AddGrade(2);
+            employee.AddGrade(7);
+            employee.AddGrade(5);
+            
+            
+            var statistics = employee.GetStatistics();
+            Assert.AreEqual 
 
 
-            // assert
-            Assert.AreEqual(number1, number2);
-        }
-        [Test]
-        public void String()
-        {
 
-            // arrange
-            string name1 = ("Karolina");
-            string name2 = ("Kuba");
-
-            // act
-
-
-            // assert
-            Assert.AreNotEqual(name1, name2);
-        }
-
-
-        private Employee GetUser(string name)
-        {
-            return new Employee(name);
         }
     }
-}
