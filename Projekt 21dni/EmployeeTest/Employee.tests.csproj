@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>Projekt_21dni.tests</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -19,8 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\..\repos\Projekt-21dni\Projekt 21dni\Projekt 21dni\Projekt 21dni.csproj" />
-    <ProjectReference Include="..\Projekt 21dni\Projekt 21dni.csproj" />
+    <ProjectReference Include="..\Projekt 21dni\!Projekt_21dni.csproj" />
   </ItemGroup>
 
 </Project>
