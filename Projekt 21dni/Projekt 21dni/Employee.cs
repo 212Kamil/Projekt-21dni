@@ -38,22 +38,24 @@
         }
         public void AddGrade(double grade)
         {
-            this.grades.Add((float)grade);
+            float gradeAsFloat = (float)grade;
+            this.AddGrade(gradeAsFloat);
         }
         public void AddGrade(int grade)
         {
-            this.grades.Add((float)grade);
+            float gradeAsFloat = grade;
+            this.AddGrade(gradeAsFloat);
         }
 
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
-
             statistics.Average = 0;
             statistics.Max = float.MinValue;
             statistics.Min = float.MaxValue;
 
-            foreach(var grade in this.grades)
+
+            foreach (var grade in this.grades)
             {
                 statistics.Max = Math.Max(statistics.Max, grade);
                 statistics.Min = Math.Min(statistics.Min, grade);
