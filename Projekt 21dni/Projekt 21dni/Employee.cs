@@ -1,4 +1,7 @@
-﻿namespace Projekt_21dni
+﻿using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
+
+namespace Projekt_21dni
 {
     public class Employee
     {
@@ -66,6 +69,27 @@
             statistics.Average = statistics.Average / this.grades.Count;  // statistics.Average /= this.grades.Count;
 
             return statistics;
+
         }
+        public Statistics GetStatisticsWithFor()
+        {
+            var statistics2 = new Statistics();
+            statistics2.Average = 0;
+            statistics2.Max = float.MinValue;
+            statistics2.Min = float.MaxValue;
+
+            for (var index = 0; index <= this.grades.Count; index++)
+            {
+                statistics2.Max = Math.Max(statistics2.Max, this.grades[index]);
+                statistics2.Min = Math.Min(statistics2.Min, this.grades[index]);
+                statistics2.Average += this.grades[index];
+            }
+            statistics2.Average /= this.grades.Count;
+
+            return statistics2;
+        }
+            
+
+        
     }
 }
